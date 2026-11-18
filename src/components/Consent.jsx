@@ -73,7 +73,7 @@ const btnSame = `${btn} bg-turquesa text-white hover:bg-turquesa-oscuro focus-vi
 
 function LegalLinks({ items }) {
   return (
-    <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
+    <ul className="flex flex-wrap gap-x-4 gap-y-0 text-sm">
       {items.map((l) => (
         <li key={l.href}>
           <a href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center underline underline-offset-4 hover:text-turquesa-claro">
@@ -89,13 +89,13 @@ function Banner() {
   const { acceptAll, rejectAll, openPanel } = useConsent();
   return (
     <section aria-label="Preferencias de cookies" className="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-5">
-      <div className="mx-auto max-w-4xl rounded-2xl bg-marino p-5 text-white shadow-2xl ring-1 ring-white/10 sm:p-6">
+      <div className="mx-auto max-w-4xl rounded-2xl bg-marino p-4 text-white shadow-2xl ring-1 ring-white/10 sm:p-6">
         <div className="flex items-start gap-3">
           <ShieldCheck aria-hidden="true" className="mt-0.5 h-6 w-6 shrink-0 text-turquesa-claro" />
-          <p className="leading-relaxed">Este sitio usa cookies técnicas para funcionar. Con su permiso, también podrían usarse cookies de analítica o de marketing. Pueden aceptarlas, rechazarlas o configurarlas.</p>
+          <p className="text-[15px] leading-snug sm:text-base sm:leading-relaxed">Este sitio usa cookies técnicas para funcionar. Con su permiso, también podrían usarse cookies de analítica o de marketing. Pueden aceptarlas, rechazarlas o configurarlas.</p>
         </div>
-        <div className="mt-2 pl-9"><LegalLinks items={[LEGAL[2], LEGAL[1], LEGAL[0]]} /></div>
-        <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-1 sm:pl-9"><LegalLinks items={[LEGAL[2], LEGAL[1], LEGAL[0]]} /></div>
+        <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3 [&>button]:px-2 [&>button]:text-sm sm:[&>button]:text-base">
           <button type="button" className={btnSame} onClick={acceptAll}>Aceptar todas</button>
           <button type="button" className={btnSame} onClick={rejectAll}>Rechazar todas</button>
           <button type="button" className={btnSame} onClick={openPanel}>Configurar</button>

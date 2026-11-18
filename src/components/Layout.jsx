@@ -46,7 +46,7 @@ function Header() {
       </Container>
       <nav id="menu-movil" aria-label="Principal (móvil)" className={`${open ? 'block' : 'hidden'} border-t border-white/10 bg-marino xl:hidden`}>
         <Container className="py-3">
-          <ul className="grid gap-1">
+          <ul className="grid grid-cols-2 gap-1">
             {NAV.map((n) => (
               <li key={n.to}><NavLink to={n.to} end className={linkCls}>{n.label}</NavLink></li>
             ))}
