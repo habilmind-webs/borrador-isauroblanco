@@ -80,7 +80,7 @@ function head(r) {
 }
 
 for (const r of ROUTES) {
-  const html = template.replace('<!--head-->', head(r)).replace('<!--app-->', render(r.path));
+  const html = template.replace('<!--head-->', head(r)).replace('<div id="root">', `<div id="root" data-ruta="${r.path}">`).replace('<!--app-->', render(r.path));
   const file = r.path === '/' ? path.join(dist, 'index.html') : path.join(dist, r.path.slice(1), 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, html);
@@ -88,7 +88,7 @@ for (const r of ROUTES) {
 }
 
 // 404 sin indexar
-const nf = template.replace('<!--head-->', '<title>Página no encontrada | Isauro Blanco</title>\n    <meta name="robots" content="noindex" />').replace('<!--app-->', render('/pagina-no-encontrada'));
+const nf = template.replace('<div id="root">', '<div id="root" data-ruta="404">').replace('<!--head-->', '<title>Página no encontrada | Isauro Blanco</title>\n    <meta name="robots" content="noindex" />').replace('<!--app-->', render('/pagina-no-encontrada'));
 fs.writeFileSync(path.join(dist, '404.html'), nf);
 
 const today = new Date().toISOString().slice(0, 10);
