@@ -48,7 +48,7 @@ export default function Galeria() {
   const move = useCallback((d) => setOpen((i) => (i + d + GALERIA.length) % GALERIA.length), []);
   return (
     <>
-      <PageHeader titulo="Galería" entradilla="Imágenes de su vida profesional." />
+      <PageHeader titulo="Galería" entradilla="Imágenes de su **vida profesional**." />
       <Container className="py-16">
         <ul className="columns-1 gap-5 sm:columns-2 lg:columns-3">
           {GALERIA.map((g, i) => (

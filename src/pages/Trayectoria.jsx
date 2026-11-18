@@ -1,12 +1,13 @@
 import { Container, PageHeader, SectionTitle, Card } from '../components/Ui.jsx';
 import Icon from '../components/Icon.jsx';
+import Rico from '../components/Rico.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { TRAYECTORIA, FACETAS } from '../content.js';
 
 export default function Trayectoria() {
   return (
     <>
-      <PageHeader titulo="Trayectoria" entradilla="Más de cuatro décadas dedicadas a enseñar, investigar y acompañar a quienes educan." />
+      <PageHeader titulo="Trayectoria" entradilla="**Más de cuatro décadas** dedicadas a enseñar, investigar y acompañar a quienes educan." />
       <section aria-label="Línea de tiempo" className="py-16">
         <Container>
           <ol className="relative mx-auto max-w-5xl">
@@ -19,7 +20,7 @@ export default function Trayectoria() {
                 <Reveal className={`rounded-tarjeta bg-white p-6 shadow-suave ring-1 ring-marino/5 ${i % 2 ? 'md:col-start-2' : 'md:col-start-1 md:text-right'}`}>
                   <p className="font-titulo text-sm font-semibold uppercase tracking-wider text-turquesa-oscuro">{t.cuando}</p>
                   <h2 className="mt-1 font-titulo text-xl font-semibold leading-snug text-marino">{t.titulo}</h2>
-                  <p className="mt-2 leading-relaxed text-marino/85">{t.texto}</p>
+                  <p className="mt-2 leading-relaxed text-marino/85"><Rico texto={t.texto} /></p>
                 </Reveal>
               </li>
             ))}

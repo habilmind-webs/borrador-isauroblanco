@@ -2,6 +2,7 @@ import { Container, SectionTitle, Card, ButtonLink, MoreLink } from '../componen
 import Img from '../components/Img.jsx';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
+import Rico from '../components/Rico.jsx';
 import VideoCard from '../components/VideoCard.jsx';
 import { CIFRAS, QUIEN_FUE, IDEAS, IN_MEMORIAM_PORTADA, LIBROS, VIDEOS } from '../content.js';
 
@@ -52,7 +53,7 @@ export default function Inicio() {
         <Container className="grid items-center gap-10 md:grid-cols-[1fr_320px]">
           <Reveal>
             <SectionTitle id="quien-fue">Quién fue</SectionTitle>
-            <p className="mt-5 max-w-lectura text-lg leading-relaxed text-marino/90">{QUIEN_FUE}</p>
+            <p className="mt-5 max-w-lectura text-lg leading-relaxed text-marino/90"><Rico texto={QUIEN_FUE} /></p>
             <div className="mt-5"><MoreLink to="/biografia">Leer su biografía completa</MoreLink></div>
           </Reveal>
           <Reveal className="mx-auto w-full max-w-xs">
@@ -101,7 +102,7 @@ export default function Inicio() {
         <Container className="max-w-3xl text-center">
           <Icon name="Heart" className="mx-auto h-8 w-8 text-turquesa-claro" />
           <h2 id="memoriam" className="mt-4 font-titulo text-3xl font-semibold">In memoriam</h2>
-          <p className="mx-auto mt-5 max-w-lectura text-lg leading-relaxed text-white/90">{IN_MEMORIAM_PORTADA}</p>
+          <p className="mx-auto mt-5 max-w-lectura text-lg leading-relaxed text-white/90"><Rico texto={IN_MEMORIAM_PORTADA} /></p>
           <div className="mt-8"><ButtonLink to="/in-memoriam" variant="claro">Ir a In memoriam</ButtonLink></div>
         </Container>
       </section>

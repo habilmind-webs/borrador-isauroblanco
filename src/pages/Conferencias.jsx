@@ -7,7 +7,7 @@ import { VIDEOS, PONENCIA, ENTREVISTAS } from '../content.js';
 export default function Conferencias() {
   return (
     <>
-      <PageHeader titulo="Conferencias y medios" entradilla="Una voz que explicaba con claridad cómo aprende el cerebro y cómo acompañar mejor a niños, adolescentes y docentes." />
+      <PageHeader titulo="Conferencias y medios" entradilla="Una voz que explicaba con claridad **cómo aprende el cerebro** y cómo acompañar mejor a niños, adolescentes y docentes." />
       <section aria-label="Fotografías de conferencias" className="pt-12">
         <Container className="grid grid-cols-3 gap-3 sm:gap-5">
           <Img name="isauro-conferencia-escenario" alt="Isauro Blanco durante una conferencia" sizesAttr="33vw" className="h-36 w-full rounded-tarjeta object-cover sm:h-64" />

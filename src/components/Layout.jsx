@@ -97,9 +97,15 @@ function Footer() {
         </div>
       </Container>
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-1 py-6 text-sm text-white/75 sm:flex-row sm:justify-between">
+        <Container className="flex flex-col gap-1 py-6 text-sm text-white/75 sm:flex-row sm:items-center sm:justify-between">
           <p>Fotografías del archivo de Isauro Blanco</p>
-          <p>Sitio realizado por Habilmind en homenaje a Isauro Blanco.</p>
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>Sitio realizado por Habilmind en homenaje a Isauro Blanco.</span>
+            <a href="https://habilmind.com" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center rounded opacity-80 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa-claro">
+              <img src="/img/logo-habilmind-negativo-28.webp" srcSet="/img/logo-habilmind-negativo-28.webp 1x, /img/logo-habilmind-negativo-56.webp 2x" alt="Habilmind" width="68" height="28" loading="lazy" decoding="async" className="h-6 w-auto" />
+              <span className="sr-only"> (se abre en una pestaña nueva)</span>
+            </a>
+          </p>
         </Container>
       </div>
     </footer>

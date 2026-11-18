@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import Icon from './Icon.jsx';
 import Reveal from './Reveal.jsx';
+import Rico from './Rico.jsx';
 
 export function Container({ className = '', children }) {
   return <div className={`mx-auto w-full max-w-6xl px-5 sm:px-8 ${className}`}>{children}</div>;
@@ -12,7 +13,7 @@ export function PageHeader({ titulo, entradilla, children }) {
     <header className="bg-marino text-white">
       <Container className="py-14 sm:py-20">
         <h1 className="font-titulo text-4xl font-semibold tracking-tight sm:text-5xl">{titulo}</h1>
-        {entradilla && <p className="mt-5 max-w-lectura text-lg leading-relaxed text-white/85">{entradilla}</p>}
+        {entradilla && <p className="mt-5 max-w-lectura text-lg leading-relaxed text-white/85"><Rico texto={entradilla} /></p>}
         {children}
       </Container>
     </header>
@@ -33,7 +34,7 @@ export function Card({ icon, titulo, texto, fuente, as = 'h3' }) {
         </span>
       )}
       <H className="font-titulo text-lg font-semibold leading-snug text-marino">{titulo}</H>
-      <p className="mt-2 leading-relaxed text-marino/85">{texto}</p>
+      <p className="mt-2 leading-relaxed text-marino/85"><Rico texto={texto} /></p>
       {fuente && <p className="mt-auto pt-4 text-sm text-marino/70">Fuente: {fuente}</p>}
     </Reveal>
   );

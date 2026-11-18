@@ -2,6 +2,7 @@ import { ExternalLink } from 'lucide-react';
 import { Container, PageHeader, SectionTitle, ExtLink } from '../components/Ui.jsx';
 import Img from '../components/Img.jsx';
 import Icon from '../components/Icon.jsx';
+import Rico from '../components/Rico.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { LIBROS, ARTICULOS } from '../content.js';
 
@@ -24,7 +25,7 @@ function Portada({ l }) {
 export default function Publicaciones() {
   return (
     <>
-      <PageHeader titulo="Publicaciones" entradilla="Libros y artículos para docentes, directivos y familias." />
+      <PageHeader titulo="Publicaciones" entradilla="Libros y artículos para **docentes, directivos y familias**." />
       <section aria-labelledby="libros" className="py-16">
         <Container>
           <SectionTitle id="libros">Libros</SectionTitle>
@@ -36,7 +37,7 @@ export default function Publicaciones() {
                   <h3 className="mt-5 font-titulo text-xl font-semibold leading-snug text-marino">{l.titulo}</h3>
                   {l.subtitulo && <p className="text-marino/80">{l.subtitulo}</p>}
                   {l.datos.length > 0 && <p className="mt-2 text-sm text-marino/70">{l.datos.join(' · ')}</p>}
-                  {l.texto && <p className="mt-3 leading-relaxed text-marino/85">{l.texto}</p>}
+                  {l.texto && <p className="mt-3 leading-relaxed text-marino/85"><Rico texto={l.texto} /></p>}
                   {l.tienda && (
                     <div className="mt-auto pt-5">
                       <a href={l.tienda} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-turquesa-oscuro px-4 font-titulo font-medium text-white hover:bg-turquesa-hondo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa focus-visible:ring-offset-2">

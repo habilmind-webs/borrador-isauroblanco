@@ -1,5 +1,6 @@
 import { Container, PageHeader, QuoteBlock, ExtLink } from '../components/Ui.jsx';
 import Img from '../components/Img.jsx';
+import Rico from '../components/Rico.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { BIO_ENTRADILLA, BIO_SECCIONES, BIO_CITA } from '../content.js';
 
@@ -12,7 +13,7 @@ export default function Biografia() {
           {BIO_SECCIONES.map((s) => (
             <Reveal as="section" key={s.titulo} className="mb-12">
               <h2 className="font-titulo text-2xl font-semibold leading-snug text-marino">{s.titulo}</h2>
-              {s.parrafos.map((p) => <p key={p.slice(0, 30)} className="mt-4 text-lg leading-relaxed text-marino/90">{p}</p>)}
+              {s.parrafos.map((p) => <p key={p.slice(0, 30)} className="mt-4 text-lg leading-relaxed text-marino/90"><Rico texto={p} /></p>)}
               {s.fuentes && (
                 <p className="mt-3 text-sm leading-relaxed text-marino/70">
                   <span className="font-medium">Fuentes: </span>
