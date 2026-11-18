@@ -1,0 +1,8 @@
+# Redirecciones 301 de las URL antiguas de isauroblanco.com (sección 8.4 del encargo).
+# NO se aplican en el borrador. Se importarán en el bloque de producción cuando haya OK para el dominio.
+redir /Inicio.html / permanent
+redir /Publicaciones.html /publicaciones permanent
+redir /Internet-y-Prensa.html /conferencias-y-medios permanent
+redir /Galería.html /galeria permanent
+redir /Galer%C3%ADa.html /galeria permanent
+redir /Habilmind.html / permanent

@@ -1,0 +1,22 @@
+@import '@fontsource/outfit/latin-500.css';
+@import '@fontsource/outfit/latin-600.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/source-serif-4/latin-400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { color: #193547; background: #ffffff; -webkit-text-size-adjust: 100%; }
+  body { @apply font-sans antialiased; }
+  :focus-visible { outline: 2px solid #0095a9; outline-offset: 2px; }
+}
+
+.reveal { transition: opacity .6s ease, transform .6s ease; }
+.reveal-hidden { opacity: 0; transform: translateY(14px); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-hidden { transition: none; opacity: 1; transform: none; }
+  * { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
