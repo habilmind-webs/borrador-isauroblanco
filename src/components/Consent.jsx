@@ -69,7 +69,7 @@ export function ConsentProvider({ children }) {
 }
 
 const btn = 'min-h-[44px] flex-1 rounded-xl px-4 py-2.5 font-titulo text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
-const btnSame = `${btn} bg-turquesa text-white hover:bg-turquesa-oscuro focus-visible:ring-turquesa focus-visible:ring-offset-marino`;
+const btnSame = `${btn} bg-turquesa-oscuro text-white hover:bg-turquesa-hondo focus-visible:ring-turquesa focus-visible:ring-offset-marino`;
 
 function LegalLinks({ items }) {
   return (

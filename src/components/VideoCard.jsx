@@ -29,7 +29,7 @@ export default function VideoCard({ v, headingLevel = 'h3' }) {
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-marino/90 p-4 text-center text-white" role="group" aria-label="Aviso antes de cargar el vídeo">
                 <p className="text-sm sm:text-base">Al reproducir este vídeo se cargará contenido de YouTube.</p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  <button type="button" onClick={() => setStep('play')} autoFocus className="min-h-[44px] rounded-xl bg-turquesa px-4 font-titulo font-medium hover:bg-turquesa-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Cargar vídeo</button>
+                  <button type="button" onClick={() => setStep('play')} autoFocus className="min-h-[44px] rounded-xl bg-turquesa-oscuro px-4 font-titulo font-medium hover:bg-turquesa-hondo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Cargar vídeo</button>
                   <a href={yt} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-1 rounded-xl border border-white/70 px-4 font-titulo font-medium hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
                     Abrir en YouTube<ExternalLink aria-hidden="true" className="h-4 w-4" /><span className="sr-only"> (se abre en una pestaña nueva)</span>
                   </a>
@@ -45,7 +45,7 @@ export default function VideoCard({ v, headingLevel = 'h3' }) {
         {v.texto && <p className="mt-3 leading-relaxed text-marino/85">«{v.texto}»</p>}
         <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-4">
           {step !== 'play' && (
-            <button type="button" onClick={start} className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-turquesa px-4 font-titulo font-medium text-white hover:bg-turquesa-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa focus-visible:ring-offset-2">
+            <button type="button" onClick={start} className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-turquesa-oscuro px-4 font-titulo font-medium text-white hover:bg-turquesa-hondo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa focus-visible:ring-offset-2">
               <Play aria-hidden="true" className="h-4 w-4" /> Ver vídeo<span className="sr-only">: {v.titulo}</span>
             </button>
           )}

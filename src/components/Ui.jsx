@@ -42,7 +42,7 @@ export function Card({ icon, titulo, texto, fuente, as = 'h3' }) {
 export function ButtonLink({ to, children, variant = 'primario', className = '' }) {
   const base = 'inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-titulo font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
   const v = {
-    primario: 'bg-turquesa text-white hover:bg-turquesa-oscuro focus-visible:ring-turquesa',
+    primario: 'bg-turquesa-oscuro text-white hover:bg-turquesa-hondo focus-visible:ring-turquesa',
     claro: 'bg-white text-marino hover:bg-claro focus-visible:ring-white focus-visible:ring-offset-marino',
     borde: 'border border-white/60 text-white hover:bg-white/10 focus-visible:ring-white focus-visible:ring-offset-marino',
   }[variant];

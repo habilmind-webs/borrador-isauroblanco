@@ -39,7 +39,7 @@ export default function Publicaciones() {
                   {l.texto && <p className="mt-3 leading-relaxed text-marino/85">{l.texto}</p>}
                   {l.tienda && (
                     <div className="mt-auto pt-5">
-                      <a href={l.tienda} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-turquesa px-4 font-titulo font-medium text-white hover:bg-turquesa-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa focus-visible:ring-offset-2">
+                      <a href={l.tienda} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-turquesa-oscuro px-4 font-titulo font-medium text-white hover:bg-turquesa-hondo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa focus-visible:ring-offset-2">
                         Ver en tienda<span className="sr-only">: {l.titulo} (se abre en una pestaña nueva)</span><ExternalLink aria-hidden="true" className="h-4 w-4" />
                       </a>
                     </div>

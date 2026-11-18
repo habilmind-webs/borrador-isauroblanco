@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         marino: { DEFAULT: '#193547', 900: '#10242f', 700: '#24485f' },
-        turquesa: { DEFAULT: '#0095a9', oscuro: '#007585', claro: '#7fd3df' },
+        turquesa: { DEFAULT: '#0095a9', oscuro: '#007585', hondo: '#005f6b', claro: '#7fd3df' },
         claro: '#eef6f8',
         ambar: '#ffa503',
       },

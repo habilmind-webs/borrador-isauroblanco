@@ -109,7 +109,7 @@ function Footer() {
 export default function Layout({ children }) {
   return (
     <>
-      <a href="#contenido" className="sr-only z-[70] rounded-lg bg-turquesa px-4 py-3 font-medium text-white focus:not-sr-only focus:fixed focus:left-3 focus:top-3">Saltar al contenido</a>
+      <a href="#contenido" className="sr-only z-[70] rounded-lg bg-turquesa-oscuro px-4 py-3 font-medium text-white focus:not-sr-only focus:fixed focus:left-3 focus:top-3">Saltar al contenido</a>
       <Header />
       <main id="contenido" tabIndex={-1} className="focus:outline-none">{children}</main>
       <Footer />
