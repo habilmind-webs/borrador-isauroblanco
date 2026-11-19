@@ -106,6 +106,16 @@ export default function Inicio() {
           <div className="mt-8"><ButtonLink to="/in-memoriam" variant="claro">Ir a In memoriam</ButtonLink></div>
         </Container>
       </section>
+
+      <section aria-label="Homenaje de Habilmind" className="border-t border-white/10 bg-marino pb-14 pt-10 text-white">
+        <Container className="flex flex-col items-center gap-3 text-center">
+          <p className="font-serif text-xl text-white/90 sm:text-2xl">Con el cariño de Habilmind</p>
+          <a href="https://habilmind.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded opacity-90 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquesa-claro">
+            <img src="/img/logo-habilmind-negativo-56.webp" alt="Habilmind" width="136" height="56" loading="lazy" decoding="async" className="h-10 w-auto" />
+            <span className="sr-only"> (se abre en una pestaña nueva)</span>
+          </a>
+        </Container>
+      </section>
     </>
   );
 }
